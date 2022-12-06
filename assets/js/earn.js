@@ -26,12 +26,6 @@ $(function() {
         }
     });
 
-    const getData = async () => {
-        const response = await fetch(`http://bp-api.avner.sg/users/${user}/data`);
-        const data = await response.json();
-        return data;
-    }
-
     const priceList = {
         "massage": 70,
         "story": 170,
@@ -61,11 +55,6 @@ $(function() {
                     body: JSON.stringify({ "add": price })
                 })
 
-                getData(user).then((data) => {
-                    firebase.database().ref('users/' + user).update({
-                        "offers-completed": data["offers-completed"]+1
-                    });
-                })
                 firebase.database().ref('users/' + user + '/offers-completed').once('value').then((snapshot) => {
                     firebase.database().ref('users/' + user).update({
                         "offers-completed": Number(snapshot.val())+1
