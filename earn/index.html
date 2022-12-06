@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <title>Earn | BPoints</title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/select2.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/owlcarousel.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/range-slider.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/shop.css">
+    <link id="color" rel="stylesheet" href="../assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+    <!-- Auth -->
+    <script src="assets/js/auth.js"></script>
+
+    <!-- Firebase -->
+    <script src="//www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="//www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  </head>
+  <body>
+    <!-- loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader-index"><span></span></div>
+      <svg>
+        <defs></defs>
+        <filter id="goo">
+          <fegaussianblur in="SourceGraphic" stddeviation="11" result="blur"></fegaussianblur>
+          <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"> </fecolormatrix>
+        </filter>
+      </svg>
+    </div>
+    <!-- loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+      <!-- Page Header Start-->
+      <div class="page-header">
+        <div class="header-wrapper row m-0">
+          <div class="header-logo-wrapper col-auto p-0">
+            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png"
+              alt=""></a></div>
+            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
+            </div>
+          </div>
+          <div class="left-header col horizontal-wrapper ps-0">
+          </div>
+          <div class="nav-right col-8 pull-right right-header p-0">
+            <ul class="nav-menus">
+              <li>
+                <div class="mode"><i class="fa fa-moon-o"></i></div>
+              </li>
+              <li>
+                <div class="balance-header">
+                  <i class="fa fa-credit-card-alt"></i>
+                  BP <span class="bp-data-balance">0</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Page Header Ends                              -->
+      <!-- Page Body Start-->
+      <div class="page-body-wrapper">
+        <!-- Page Sidebar Start-->
+        <div class="sidebar-wrapper">
+          <div>
+            <div class="logo-wrapper">
+              <a href="/">
+                <img class="img-fluid for-light" src="../assets/images/logo/logo.png" alt="">
+                <img class="img-fluid for-dark"src="../assets/images/logo/logo_dark.png" alt=""></a>
+
+              <div class="back-btn"><i class="fa fa-angle-left"></i></div>
+              <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"></i></div>
+            </div>
+            <nav class="sidebar-main">
+              <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+              <div id="sidebar-menu">
+                <ul class="sidebar-links" id="simple-bar">
+                  <li class="back-btn">
+                    <a href="/">
+                      <img class="img-fluid" src="../assets/images/logo/logo-icon.png" alt="">
+                    </a>
+                    <div class="mobile-back text-end">
+                      <span>Back</span>
+                      <i class="fa fa-angle-right ps-2" aria-hidden="true"></i>
+                    </div>
+                  </li>
+                  <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav" href="/">
+                      <i data-feather="home"></i><span>Dashboard</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav" href="#">
+                      <i data-feather="credit-card"></i><span>Earn</span>
+                    </a>
+                  </li>
+                  <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title" href="#"><i data-feather="shopping-bag"></i><span>Shop</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="../shop">Shop</a></li>
+                      <li><a href="../shop/items">My Items <label class="badge badge-light-primary" style="top: 8.5px;" id="bp-num-items">0</label></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav" href="../account">
+                      <i data-feather="user"></i><span>My Account</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+            </nav>
+          </div>
+        </div>
+        <!-- Page Sidebar Ends-->
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-title">
+              <div class="row">
+                <div class="col-6">
+                  <h3>Shop</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+          <div class="container-fluid product-wrapper">
+            <div class="product-grid">
+              <div class="product-wrapper-grid">
+                <div class="row">
+                  <div class="col-xl-3 col-sm-6 xl-4">
+                    <div class="card">
+                      <div class="product-box">
+                        <div class="product-img" data-bs-toggle="modal" data-bs-target="#massageModalCenter"><img class="img-fluid" src="../assets/images/shop/massage.webp" alt="">
+                        </div>
+                        <div class="modal fade" id="massageModalCenter" tabindex="-1" role="dialog" aria-labelledby="massageModalCenter" aria-hidden="true">
+                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <div class="product-box row">
+                                  <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/shop/massage.webp" alt=""></div>
+                                  <div class="product-details col-lg-6 text-start">
+                                    <h4>Massage</h4>
+                                    <div class="product-price">BP 70
+                                    </div>
+                                    <div class="product-view">
+                                      <h6 class="f-w-600">Details</h6>
+                                      <p class="mb-0">Give Avner a relaxing 5 min massage</p>
+                                    </div>
+                                    <div class="product-qnty">
+                                      <button
+                                      class="btn btn-primary"
+                                      type="button"
+                                      data-bs-dismiss="modal"
+                                      aria-label="Close"
+                                      data-earn-item="Massage"
+                                      data-earn-item-price="70">Get</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-details">
+                          <h4 data-bs-toggle="modal" data-bs-target="#massageModalCenter">Massage</h4>
+                          <p>Give Avner a relaxing 5 min massage</p>
+                          <div class="product-price">BP 70</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 xl-4">
+                    <div class="card">
+                      <div class="product-box">
+                        <div class="product-img" data-bs-toggle="modal" data-bs-target="#storyModalCenter">
+                          <div class="ribbon ribbon-danger">Recommended</div><img class="img-fluid" src="../assets/images/shop/bedtime-story.png" alt="">
+                        </div>
+                        <div class="modal fade" id="storyModalCenter" tabindex="-1" role="dialog" aria-labelledby="storyModalCenter" aria-hidden="true">
+                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <div class="product-box row">
+                                  <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/shop/bedtime-story.png" alt=""></div>
+                                  <div class="product-details col-lg-6 text-start">
+                                    <h4>Bedtime Story</h4>
+                                    <div class="product-price">BP 170</div>
+                                    <div class="product-view">
+                                      <h6 class="f-w-600">Details</h6>
+                                      <p class="mb-0">Tell Avner an interesting bedtime story</p>
+                                    </div>
+                                    <div class="product-qnty">
+                                      <button
+                                      class="btn btn-primary"
+                                      type="button"
+                                      data-bs-dismiss="modal"
+                                      aria-label="Close"
+                                      data-earn-item="Bedtime Story"
+                                      data-earn-item-price="200">Get</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-details" data-bs-toggle="modal" data-bs-target="#storyModalCenter">
+                          <h4>Bedtime Story</h4>
+                          <p>Tell Avner an interesting bedtime story</p>
+                          <div class="product-price">BP 170<del>BP 150</del></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 xl-4">
+                    <div class="card">
+                      <div class="product-box">
+                        <div class="product-img" data-bs-toggle="modal" data-bs-target="#dishwasherModalCenter">
+                          <img class="img-fluid" src="../assets/images/shop/washing-dishes.jpg" alt="">
+                        </div>
+                        <div class="modal fade" id="dishwasherModalCenter" tabindex="-1" role="dialog" aria-labelledby="dishwasherModalCenter" aria-hidden="true">
+                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <div class="product-box row">
+                                  <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/shop/washing-dishes.jpg" alt=""></div>
+                                  <div class="product-details col-lg-6 text-start">
+                                    <h4>Dishwashing Service</h4>
+                                    <div class="product-price">BP 100</div>
+                                    <div class="product-view">
+                                      <h6 class="f-w-600">Details</h6>
+                                      <p class="mb-0">Help Avner to wash his dishes after lunch</p>
+                                    </div>
+                                    <div class="product-qnty">
+                                      <button 
+                                        class="btn btn-primary"
+                                        type="button"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                        data-earn-item="Dishwashing Service"
+                                        data-earn-item-price="100"
+                                      >Get</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-details" data-bs-toggle="modal" data-bs-target="#dishwasherModalCenter">
+                          <h4>Dishwashing Service</h4>
+                          <p>Help Avner to wash his dishes after lunch</p>
+                          <div class="product-price">BP 100</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 xl-4">
+                    <div class="card">
+                      <div class="product-box">
+                        <div class="product-img" data-bs-toggle="modal" data-bs-target="#mopModalCenter">
+                          <img class="img-fluid" src="../assets/images/earn/milk.png" alt="">
+                        </div>
+                        <div class="modal fade" id="mopModalCenter" tabindex="-1" role="dialog" aria-labelledby="mopModalCenter" aria-hidden="true">
+                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <div class="product-box row">
+                                  <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/earn/milk.png" alt=""></div>
+                                  <div class="product-details col-lg-6 text-start">
+                                    <h4>Make Milk for Avner</h4>
+                                    <div class="product-price">BP 45</div>
+                                    <div class="product-view">
+                                      <h6 class="f-w-600">Details</h6>
+                                      <p class="mb-0">Make Avner a cup of milk. (6 scoops of powder + 210ml water)</p>
+                                    </div>
+                                    <div class="product-qnty">
+                                      <button 
+                                        class="btn btn-primary"
+                                        type="button"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                        data--item="Make Milk for Avner"
+                                        data-purchase-item-price="200"
+                                      >Get</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-details" data-bs-toggle="modal" data-bs-target="#mopModalCenter">
+                          <h4>Make Milk for Avner</h4>
+                          <p>Make Avner a cup of milk</p>
+                          <div class="product-price">BP 45</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 xl-4">
+                    <div class="card">
+                      <div class="product-box">
+                        <div class="product-img" data-bs-toggle="modal" data-bs-target="#customModalCenter">
+                          <img class="img-fluid" src="../assets/images/shop/mopping.jpg" alt="">
+                        </div>
+                        <div class="modal fade" id="customModalCenter" tabindex="-1" role="dialog" aria-labelledby="customModalCenter" aria-hidden="true">
+                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <div class="product-box row">
+                                  <div class="product-img col-lg-6"><img class="img-fluid" src="../assets/images/shop/mopping.jpg" alt=""></div>
+                                  <div class="product-details col-lg-6 text-start">
+                                    <h4>Custom Offer</h4>
+                                    <div class="product-price">BP ?</div>
+                                    <div class="product-view">
+                                      <h6 class="f-w-600">Details</h6>
+                                      <p class="mb-0">Get a specific amount of BPoints, to be only used by Avner</p>
+                                    </div>
+                                    <div class="product-qnty">
+                                      <button 
+                                        class="btn btn-primary"
+                                        type="button"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                        data-earn-item="Custom Offer"
+                                      >Get</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-details" data-bs-toggle="modal" data-bs-target="#customModalCenter">
+                          <h4>Custom Offer</h4>
+                          <p>Get a specific amount of BPoints, to be only used by Avner</p>
+                          <div class="product-price">BP ???</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 footer-copyright text-center">
+                <p class="mb-0">
+                  Copyright <script>document.write(new Date().getFullYear());</script> © BPoints
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- scrollbar js-->
+    <script src="../assets/js/scrollbar/simplebar.js"></script>
+    <script src="../assets/js/scrollbar/custom.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="../assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="../assets/js/sidebar-menu.js"></script>
+    <script src="../assets/js/range-slider/ion.rangeSlider.min.js"></script>
+    <script src="../assets/js/range-slider/rangeslider-script.js"></script>
+    <script src="../assets/js/touchspin/vendors.min.js"></script>
+    <script src="../assets/js/touchspin/touchspin.js"></script>
+    <script src="../assets/js/touchspin/input-groups.min.js"></script>
+    <script src="../assets/js/owlcarousel/owl.carousel.js"></script>
+    <script src="../assets/js/select2/select2.full.min.js"></script>
+    <script src="../assets/js/select2/select2-custom.js"></script>
+    <script src="../assets/js/tooltip-init.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/earn.js"></script>
+    <!-- login js-->
+    <!-- Plugin used-->
+  </body>
+</html>

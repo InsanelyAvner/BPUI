@@ -1,0 +1,15 @@
+.balance-header {
+    border: 2px solid #d1d1d1;
+    padding: 10px 10px;
+    border-radius: 7.5px;
+}
+
+.balance-header i {
+    margin-right: 5px;
+    color: var(--theme-deafult);
+}
+
+.page-wrapper .page-header .header-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

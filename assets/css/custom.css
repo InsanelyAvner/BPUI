@@ -1,0 +1,142 @@
+.cc-container {
+    height: 354px;
+}
+
+.credit-card {
+    height: 300px;
+    width: 500px;
+    background-image: linear-gradient(rgba(255, 61, 61, 1), rgba(255, 61, 61, 0.8));
+    border-radius: 20px;
+    color: white;
+    margin: 20px;
+    font-size: 16px;
+    box-shadow: 2px 2px 20px #707070;
+}
+
+.top-block {
+    display: inline-block;
+    width: 500px;
+    height: 140px;
+}
+
+.bottom-block {
+    display: inline-block;
+    width: 500px;
+    height: 140px;
+}
+
+.card-chip {
+    float: left;
+    margin: 20px;
+}
+
+.card-name {
+    float: right;
+    margin: 20px;
+    position: relative;
+    font-size: 28px;
+    font-weight: 550;
+}
+
+.card-number p {
+    font-size: 28px;
+    margin: -15px 0 0 0;
+    text-align-last: center;
+}
+
+.balance {
+    float: left;
+    margin: 20px;
+    position: relative;
+    top: 10px;
+}
+
+.card-balance {
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.card-icon {
+    float: right;
+    margin: 0 20px 0 0;
+    margin-top: 75px;
+}
+
+.circle-left {
+    margin-right: -15px;
+    opacity: 0.7;
+}
+
+.v-out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.earning-card.card .card-body .chart-left {
+    padding: 65px 0 65px 40px;
+}
+
+.appointment-table table tr {
+    margin-bottom: 10px;
+}
+
+.appointment-table table tr td {
+    padding: 10px 0.75rem;
+}
+
+.balance-header {
+    border: 2px solid #d1d1d1;
+    padding: 10px 10px;
+    border-radius: 7.5px;
+}
+
+.balance-header i {
+    margin-right: 5px;
+    color: var(--theme-deafult);
+}
+
+.page-wrapper .page-header .header-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 565px) {
+    .credit-card,
+    .top-block,
+    .bottom-block {
+        width: 90vw;
+    }
+
+    .credit-card {
+        height: 65vw;
+    }
+
+    .top-block {
+        height: 25vw;
+    }
+
+    .card-number p {
+        font-size: 24px;
+    }
+
+    .card-name {
+        margin: 15px;
+        font-size: 25px;
+    }
+
+    .icon-credit-card {
+        font-size: 1.75em;
+    }
+
+    .cc-container {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1660px) {
+    .bp-updates {
+        order: -1;
+    }
+}
