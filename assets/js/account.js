@@ -19,11 +19,6 @@ $(function() {
     const user = localStorage.getItem("name")
     const userProper = user.toProperCase()
 
-    const getData = async () => {
-        const response = await fetch(`http://bp-api.avner.sg/users/${user}/data`);
-        const data = await response.json();
-        return data;
-    }
 
     firebase.database().ref('users/' + user + '/items').on('value', (snapshot) => {
         $("#bp-num-items").text(Object.keys(snapshot.val()).length-1)
@@ -41,11 +36,12 @@ $(function() {
         $("#emailInput").attr("placeholder", snapshot.val());
     });
 
+    firebase.database().ref('users/' + user + '/membership').on('value', (snapshot) => {
+        $("#membership").text(snapshot.val())
+    });
+
     $("#name").text(userProper)
     
-    getData(user).then(data => {
-        $("#membership").text(data["membership"])
-    })
 
     $(".edit-profile .btn-primary").click(function() {
         Swal.fire({

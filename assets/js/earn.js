@@ -66,6 +66,11 @@ $(function() {
                         "offers-completed": data["offers-completed"]+1
                     });
                 })
+                firebase.database().ref('users/' + user + '/offers-completed').once('value').then((snapshot) => {
+                    firebase.database().ref('users/' + user).update({
+                        "offers-completed": Number(snapshot.val())+1
+                    });
+                });
 
                 Swal.fire({
                     title: "Hooray!",
@@ -108,12 +113,6 @@ $(function() {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ "add": price })
-                })
-
-                getData(user).then((data) => {
-                    firebase.database().ref('users/' + user).update({
-                        "offers-completed": data["offers-completed"]+1
-                    });
                 })
 
                 Swal.fire({
